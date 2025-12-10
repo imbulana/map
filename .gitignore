@@ -1,1 +1,11 @@
-%APPDATA%
+**/results/
+**/__pycache__/
+**/rware_v1.egg-info/
+**/pymarlzooplus.egg-info/
+**/build/
+**/dist/
+**/lib/
+**/test_runs.log
+
+%APPDATA%/
+.DS_Store
