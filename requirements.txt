@@ -1,0 +1,22 @@
+# General requirements
+gymnasium
+matplotlib
+numpy
+PyYAML
+sacred
+six
+tensorboard-logger
+tensorflow
+pandas
+torch
+einops
+scikit-learn
+pyglet==1.5.27
+tqdm
+rich
+
+# For RWARE v1
+networkx
+
+# For RWARE V2
+rware>1.0.3
