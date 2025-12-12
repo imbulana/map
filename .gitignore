@@ -6,6 +6,7 @@
 **/dist/
 **/lib/
 **/test_runs.log
+/paper
 
 %APPDATA%/
 .DS_Store
