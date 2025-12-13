@@ -216,6 +216,8 @@ class ParallelRunner:
                     action_idx += 1  # actions is not a list over every env
                     # Rendering
                     if idx == 0 and test_mode and self.args.render:
+                        if self.args.render_sleep_time is not None:
+                            time.sleep(self.args.render_sleep_time)
                         parent_conn.send(("render", None))
 
             # Update envs_not_terminated
