@@ -61,11 +61,14 @@ def run(_run, _config, _log):
     unique_token = f"{_config['name']}_seed{_config['seed']}_{map_name}_{datetime.datetime.now()}"
     args.unique_token = unique_token
     if args.use_tensorboard:
-        tb_logs_direc = os.path.join(
-            dirname(dirname(abspath(__file__))), "results", "tb_logs"
-        )
-        tb_exp_direc = os.path.join(tb_logs_direc, "{}").format(unique_token)
-        logger.setup_tb(tb_exp_direc)
+        # tb_logs_direc = os.path.join(
+        #     dirname(dirname(abspath(__file__))), "results", "tb_logs"
+        # )
+        # tb_exp_direc = os.path.join(tb_logs_direc, "{}").format(unique_token)
+        # logger.setup_tb(tb_exp_direc)
+
+        # write tensorBoard logs into the sacred run directory
+        logger.setup_tb(results_dir)
 
     # sacred is on by default
     logger.setup_sacred(_run)
