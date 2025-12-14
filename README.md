@@ -1,8 +1,6 @@
 ## Setup
 
-### Conda 
-
-Create a conda environment with python 3.11
+See instructions for Docker [here](docker/README.md). Alternatively, create a conda environment with python 3.11
 
 ```bash
 conda create -n map python=3.11
@@ -14,21 +12,13 @@ Install project (see common installation issues for pymarlzooplus [here](https:/
 ```bash
 pip install -e .
 ```
-<!-- 
-### Docker
 
-Build:
+## Usage
 
-```bash
-docker build -t map:latest .
-```
-
-Launch a training run (Set the warehouse layout with `env_args.key` and other params as necessary. See `config` directory for all options.)
+Launch a training run (modify the config args in the command or modify them in the config files in the [`config`](pymarlzooplus/config/) directory)
 
 ```bash
-docker run --rm -it \
-    -v "$PWD/pymarlzooplus/results:/app/pymarlzooplus/results" \
-    map:latest \
+python pymarlzooplus/main.py \
     --config=map_dec \
     --env-config=gymma \
     with \
@@ -40,26 +30,25 @@ docker run --rm -it \
 # [rware:rware-small-4ag-hard-v1, rware:rware-tiny-4ag-hard-v1, rware:rware-tiny-2ag-hard-v1]
 ```
 
-Evaluate on an existing checkpoint
+Evaluate a saved checkpoint
 
 ```bash
-docker run --rm -it \
-    map:latest \
+python pymarlzooplus/main.py \
     --config=map_dec \
     --env-config=gymma \
     with \
     env_args.key="rware:rware-tiny-4ag-hard-v1" \
+    env_args.time_limit=500 \
+    checkpoint_path="pymarlzooplus/results/sacred/map_dec/rware:rware-tiny-4ag-hard-v1/1/models" \
     evaluate=True \
-    checkpoint_path="pymarlzooplus/results/sacred/map_dec/rware:rware-tiny-4ag-hard-v1/4" \
     load_step=100000 \
     test_nepisode=100
+
+# load_step: Load model trained on this many timesteps (0 if choose max possible)
+# checkpoint_path: Load model from this path
 ```
 
-### Rendering
-
-To see a trained policy in action, the RWARE renderer is a native pyglet/OpenGL window. Here are 3 ways to run it on a saved checkpoint:
-
-#### 1) Linux (Recommended): run on the host (assumes conda setup from above)
+To see a trained policy in action, run
 
 ```bash
 python pymarlzooplus/main.py \
@@ -76,48 +65,3 @@ python pymarlzooplus/main.py \
 # load_step: Load model trained on this many timesteps (0 if choose max possible)
 # checkpoint_path: Load model from this path
 ```
-
-#### 2) macOS (requires XQuartz)
-
-- Install and start **XQuartz**
-- In XQuartz settings, enable **“Allow connections from network clients”**
-- Then run:
-
-```bash
-xhost + 127.0.0.1
-docker run --rm -it \
-    -e DISPLAY=host.docker.internal:0 \
-    -v "$PWD/pymarlzooplus/results:/app/pymarlzooplus/results" \
-    map:latest \
-    python pymarlzooplus/main.py \
-        --config=map_dec \
-        --env-config=gymma \
-        with \
-        env_args.key="rware:rware-tiny-4ag-hard-v1" \
-        env_args.time_limit=500 \
-        checkpoint_path="pymarlzooplus/results/sacred/map_dec/rware:rware-tiny-4ag-hard-v1/0/models" \
-        load_step = 0 \
-        evaluate=True render=True render_sleep_time=0.4
-```
-
-#### 3) Windows (requires VcXsrv / X server)
-
-- Install and start **VcXsrv** (or Xming)
-- Run it with **"Disable access control"** (quick/easy), or configure proper access control
-- Then run (PowerShell example):
-
-```powershell
-docker run --rm -it \
-    -e DISPLAY=host.docker.internal:0 \
-    -v "${PWD}\pymarlzooplus\results:/app/pymarlzooplus/results" \
-    map:latest \
-    python pymarlzooplus/main.py \
-        --config=map_dec \
-        --env-config=gymma \
-        with \
-        env_args.key="rware:rware-tiny-4ag-hard-v1" \
-        env_args.time_limit=500 \
-        checkpoint_path="pymarlzooplus/results/sacred/map_dec/rware:rware-tiny-4ag-hard-v1/0/models" \
-        load_step = 0 \
-        evaluate=True render=True render_sleep_time=0.4
-``` -->
