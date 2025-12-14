@@ -1,3 +1,5 @@
+Multi-Agent Perceiver[^1][^2] Critic for Robotic Warehouse [(RWARE)](https://github.com/semitable/robotic-warehouse.git) Tasks implemented in pymarlzooplus[^3].
+
 ## Setup
 
 See instructions for Docker [here](docker/README.md). Alternatively, create a conda environment with python 3.11
@@ -71,3 +73,14 @@ python pymarlzooplus/main.py \
 # load_step: Load model trained on this many timesteps (0 if choose max possible)
 # checkpoint_path: Load model from this path
 ```
+
+## References
+
+This implementation is largely adapted from the [`perceiver-pytorch`](https://github.com/lucidrains/perceiver-pytorch.git) and the [`pymarlzooplus`](https://github.com/AILabDsUnipi/pymarlzooplus.git) repos.
+
+[^1]: Jaegle, A., Gimeno, F., Brock, A., Zisserman, A., Vinyals, O., & Carreira, J. (2021). Perceiver: General Perception with Iterative Attention. [ArXiv:2103.03206](https://arxiv.org/abs/2103.03206)
+
+[^2]: Jaegle, A., Borgeaud, S., Alayrac, J.-B., Doersch, C., Ionescu, C., Ding, D., Koppula, S., Zoran, D., Brock, A., Shelhamer, E., Hénaff, O., Botvinick, M. M., Zisserman, A., Vinyals, O., & Carreira, J. (2022). Perceiver IO: A General Architecture for Structured Inputs & Outputs. [ArXiv:2107.14795](https://arxiv.org/abs/2107.14795)
+
+[^3]: G. Papadopoulos, A. Kontogiannis, F. Papadopoulou, C. Poulianou, I. Koumentis, & G. Vouros. An Extended Benchmarking of Multi-Agent Reinforcement Learning Algorithms in Complex Fully Cooperative
+Tasks. [arXiv:2502.04773](https://arxiv.org/abs/2502.04773)
