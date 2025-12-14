@@ -15,6 +15,8 @@ pip install -e .
 
 ## Usage
 
+### Train
+
 Launch a training run (modify the config args in the command or modify them in the config files in the [`config`](pymarlzooplus/config/) directory)
 
 ```bash
@@ -29,6 +31,8 @@ python pymarlzooplus/main.py \
 # env_args.key options:
 # [rware:rware-small-4ag-hard-v1, rware:rware-tiny-4ag-hard-v1, rware:rware-tiny-2ag-hard-v1]
 ```
+
+### Eval
 
 Evaluate a saved checkpoint
 
@@ -47,6 +51,8 @@ python pymarlzooplus/main.py \
 # load_step: Load model trained on this many timesteps (0 if choose max possible)
 # checkpoint_path: Load model from this path
 ```
+
+### Render
 
 To see a trained policy in action, run
 

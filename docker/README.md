@@ -8,6 +8,8 @@ docker build -f docker/Dockerfile -t map:latest .
 
 ## Usage
 
+### Train
+
 Launch a training run (Set the warehouse layout with `env_args.key` and other params as necessary. See the [`config`](../pymarlzooplus/config/) directory for all options.)
 
 ```bash
@@ -24,6 +26,8 @@ docker run --rm -it \
 # env_args.key options:
 # [rware:rware-small-4ag-hard-v1, rware:rware-tiny-4ag-hard-v1, rware:rware-tiny-2ag-hard-v1]
 ```
+
+### Eval
 
 Evaluate a saved checkpoint
 
@@ -44,7 +48,7 @@ docker run --rm -it \
 # checkpoint_path: Load model from this path
 ```
 
-### Rendering
+### Render
 
 #### macOS (requires XQuartz)
 
