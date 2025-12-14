@@ -82,9 +82,8 @@ This implementation is largely adapted from the following repos:
 
 [`pymarlzooplus`](https://github.com/AILabDsUnipi/pymarlzooplus.git): for training/benchmarking
 
-[^1]: Jaegle, A., Gimeno, F., Brock, A., Zisserman, A., Vinyals, O., & Carreira, J. (2021). Perceiver: General Perception with Iterative Attention. [ArXiv:2103.03206](https://arxiv.org/abs/2103.03206)
+[^1]: Jaegle, A., Gimeno, F., Brock, A., Zisserman, A., Vinyals, O., & Carreira, J. (2021). Perceiver: General Perception with Iterative Attention. [arXiv:2103.03206](https://arxiv.org/abs/2103.03206)
 
-[^2]: Jaegle, A., Borgeaud, S., Alayrac, J.-B., Doersch, C., Ionescu, C., Ding, D., Koppula, S., Zoran, D., Brock, A., Shelhamer, E., Hénaff, O., Botvinick, M. M., Zisserman, A., Vinyals, O., & Carreira, J. (2022). Perceiver IO: A General Architecture for Structured Inputs & Outputs. [ArXiv:2107.14795](https://arxiv.org/abs/2107.14795)
+[^2]: Jaegle, A., Borgeaud, S., Alayrac, J.-B., Doersch, C., Ionescu, C., Ding, D., Koppula, S., Zoran, D., Brock, A., Shelhamer, E., Hénaff, O., Botvinick, M. M., Zisserman, A., Vinyals, O., & Carreira, J. (2022). Perceiver IO: A General Architecture for Structured Inputs & Outputs. [arXiv:2107.14795](https://arxiv.org/abs/2107.14795)
 
-[^3]: G. Papadopoulos, A. Kontogiannis, F. Papadopoulou, C. Poulianou, I. Koumentis, & G. Vouros. An Extended Benchmarking of Multi-Agent Reinforcement Learning Algorithms in Complex Fully Cooperative
-Tasks. [arXiv:2502.04773](https://arxiv.org/abs/2502.04773)
+[^3]: Papadopoulos, G., Kontogiannis, A., Papadopoulou, F., Poulianou, C., Koumentis, I., & Vouros, G. (2025). An Extended Benchmarking of Multi-Agent Reinforcement Learning Algorithms in Complex Fully Cooperative Tasks. [arXiv:2502.04773](https://arxiv.org/abs/2502.04773)
