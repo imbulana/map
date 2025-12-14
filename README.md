@@ -76,7 +76,11 @@ python pymarlzooplus/main.py \
 
 ## References
 
-This implementation is largely adapted from the [`perceiver-pytorch`](https://github.com/lucidrains/perceiver-pytorch.git) and the [`pymarlzooplus`](https://github.com/AILabDsUnipi/pymarlzooplus.git) repos.
+This implementation is largely adapted from the following repos:
+
+[`perceiver-pytorch`](https://github.com/lucidrains/perceiver-pytorch.git): for Perceiver IO implementation
+
+[`pymarlzooplus`](https://github.com/AILabDsUnipi/pymarlzooplus.git): for training/benchmarking
 
 [^1]: Jaegle, A., Gimeno, F., Brock, A., Zisserman, A., Vinyals, O., & Carreira, J. (2021). Perceiver: General Perception with Iterative Attention. [ArXiv:2103.03206](https://arxiv.org/abs/2103.03206)
 
