@@ -81,7 +81,7 @@ Single seed runs w/ environment time_limit=500.
 | Task | tiny-2ag-hard | tiny-4ag-hard | small-4ag-hard |
 | --- | ---: | ---: | ---: |
 | Mean Episodic Return | 17.07 ± 4.62 | 41.74 ± 5.00 | 20.06 ± 3.71 |
-| Configuration | [link](configs/tiny-2ag-hard-v1.json) | [link](configs/tiny-4ag-hard-v1.json) | [link](configs/small-4ag-hard-v1.json)
+| Configuration | [link](configs/rware-tiny-2ag-hard-v1.json) | [link](configs/rware-tiny-4ag-hard-v1.json) | [link](configs/rware-small-4ag-hard-v1.json)
 
 ## References
 
