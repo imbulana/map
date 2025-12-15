@@ -74,6 +74,14 @@ python pymarlzooplus/main.py \
 # checkpoint_path: Load model from this path
 ```
 
+## Results (wip)
+
+Single seed runs w/ environment time_limit=500.
+
+| Task | tiny-2ag-hard | tiny-4ag-hard | small-4ag-hard |
+| --- | ---: | ---: | ---: |
+| Mean Episodic Return | 17.07 ± 4.62 | 41.74 ± 5.00 | 20.06 ± 3.71 |
+
 ## References
 
 This implementation is largely adapted from the following repos:
